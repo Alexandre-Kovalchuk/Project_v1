@@ -1,0 +1,14 @@
+# Файли та каталоги, які Git має ігнорувати в цьому проєкті
+
+# Claude Code — особисті налаштування
+.claude/settings.local.json
+
+# Секрети
+.env
+.env.*
+!.env.example
+# IDE
+.idea/
+
+# Тестові скрипти
+leak.sh

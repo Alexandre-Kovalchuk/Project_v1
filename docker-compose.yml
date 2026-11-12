@@ -1,0 +1,16 @@
+services:
+  claude:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    user: node            # не root
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - claude-config:/home/node/.claude
+    stdin_open: true
+    tty: true
+    command: claude
+
+volumes:
+  claude-config:
